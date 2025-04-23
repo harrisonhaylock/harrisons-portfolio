@@ -1,0 +1,243 @@
+/* CSS for the resume webpage */ 
+/* General styles */
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .education-entry,
+body.dark-mode .skills-entry,
+body.dark-mode .project-entry {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+#header {
+    background-color: #3a3a3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    transition: opacity 0.3s ease;
+}
+
+/* JavaScript Toggle */
+.toggle-theme {
+    background-color: #8d8d8d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.toggle-theme:hover {
+    background-color: #111111;
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Navigation styles */ 
+#navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #242e24;
+    padding: 15px;
+    font-weight: bold;
+}
+
+#navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+#navigation a:hover {
+    background-color: #4a4a4a;
+}
+
+/* Container styles */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+} 
+
+/* Headshot styles */
+#headshot {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ddd;
+    transition: transform 0.3s;
+}
+
+#headshot:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Education, Skills, Projects styles */ 
+.education-entry,
+.skills-entry,
+.project-entry {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact styles */
+.contact-entry {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-entry a{
+    color: #1e833c; 
+    text-decoration: none;     
+} 
+
+.contact-entry a:hover {
+    color: #5bfa8a; 
+    text-decoration: underline;
+}
+
+body.dark-mode .contact-entry {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+} 
+
+body.dark-mode .contact-entry a {
+    color: #ffdd57;
+}
+
+body.dark-mode .contact-entry a:hover {
+    color: #8132ff;
+}
+
+ul {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* Button styles */ 
+button.show-more {
+    background-color: #8d8d8d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+} 
+
+button.show-more:hover {
+    background-color: #111111;
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.resume-button {
+    background-color: #8d8d8d;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}  
+
+.resume-button:hover {
+    background-color: #111111; 
+    transform: scale(1.05); 
+    transition: background-color 0.3s, transform 0.3s;
+    
+}
+
+/* Contact Page Styles */ 
+.contact-form {
+    background-color: #fff; 
+    border-radius: 8px;
+    padding: 30px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px; 
+    margin: 0 auto;  
+    display: flex; 
+    flex-direction: column;  
+    gap: 15px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form label{
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    box-sizing: border-box;
+} 
+
+.contact-form textarea{
+    resize: vertical; 
+} 
+
+.contact-form button{
+    align-self: flex-start;
+} 
+
+body.dark-mode .contact-form {
+    background-color: #1e1e1e; 
+    color: #f0f0f0;
+} 
+
+body.dark-mode .contact-form input, 
+body.dark-mode .contact-form textarea {
+    background-color: #2b2b2b; 
+    color: #f0f0f0; 
+    border: 1px solid #444; 
+}
